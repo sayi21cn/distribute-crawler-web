@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 
 import xu.main.java.distribute_crawler_web.configure.TermPreprocessorWebConfigure;
 import xu.main.java.distribute_crawler_web.util.DbUtil;
-import xu.main.java.distribute_crawler_web.vo.TaskVO;
+import xu.main.java.distribute_crawler_web.vo.TaskRecord;
 
 
 public class TaskDao {
@@ -30,7 +30,7 @@ public class TaskDao {
 
 	public List<Object> queryAllTasks() {
 		try {
-			return dbUtils.executeSQL(QUERY_ALL_TASKS, TaskVO.class);
+			return dbUtils.executeSQL(QUERY_ALL_TASKS, TaskRecord.class);
 		} catch (SQLException e) {
 			logger.error("查询所有Task任务出错！", e);
 		}

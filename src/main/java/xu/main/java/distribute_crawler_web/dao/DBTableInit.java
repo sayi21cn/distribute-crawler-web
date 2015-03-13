@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 
-import xu.main.java.distribute_crawler_web.configure.TermPreprocessorWebConfigure;
+import xu.main.java.distribute_crawler_web.configure.CrawlerWebConf;
 import xu.main.java.distribute_crawler_web.util.DbUtil;
 
 
@@ -15,7 +15,7 @@ public class DBTableInit {
 
 		logger.info("DB init start !");
 
-		DbUtil dbUtils = new DbUtil(TermPreprocessorWebConfigure.JDBC_DB_NAME);
+		DbUtil dbUtils = new DbUtil(CrawlerWebConf.JDBC_DB_NAME);
 
 		String createRulePatternTableSql = "CREATE TABLE if not exists `rule_pattern` (`id` int(11) NOT NULL AUTO_INCREMENT,`identifyCharacters` varchar(500) DEFAULT NULL,`maxParseLength` int(10) DEFAULT NULL,`patternName` varchar(500) DEFAULT NULL,`numberToTel` varchar(5000) DEFAULT NULL,`numberToNature` varchar(5000) DEFAULT NULL,`numberToCommon` varchar(5000) DEFAULT NULL,`is_delete` int(10) DEFAULT '0',PRIMARY KEY (`id`)) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='规则模板表';";
 

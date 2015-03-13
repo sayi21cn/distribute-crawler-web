@@ -9,12 +9,12 @@ import org.apache.log4j.Logger;
 
 import xu.main.java.distribute_crawler_common.vo.TaskListVO;
 import xu.main.java.distribute_crawler_common.vo.TemplateVO;
-import xu.main.java.distribute_crawler_web.configure.TermPreprocessorWebConfigure;
+import xu.main.java.distribute_crawler_web.configure.CrawlerWebConf;
 import xu.main.java.distribute_crawler_web.util.DbUtil;
 
 
 public class TemplateDao {
-	private DbUtil dbUtils = new DbUtil(TermPreprocessorWebConfigure.JDBC_DB_NAME);
+	private DbUtil dbUtils = new DbUtil(CrawlerWebConf.JDBC_DB_NAME);
 
 	private Logger logger = Logger.getLogger(TemplateDao.class);
 

@@ -8,12 +8,11 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import xu.main.java.distribute_crawler_common.vo.TaskRecord;
-import xu.main.java.distribute_crawler_web.configure.TermPreprocessorWebConfigure;
+import xu.main.java.distribute_crawler_web.configure.CrawlerWebConf;
 import xu.main.java.distribute_crawler_web.util.DbUtil;
 
-
 public class TaskDao {
-	private DbUtil dbUtils = new DbUtil(TermPreprocessorWebConfigure.JDBC_DB_NAME);
+	private DbUtil dbUtils = new DbUtil(CrawlerWebConf.JDBC_DB_NAME);
 
 	private Logger logger = Logger.getLogger(TaskDao.class);
 
@@ -23,8 +22,8 @@ public class TaskDao {
 
 	private final String QUERY_ALL_TASKS = "select id,task_name,template_id,insert_db_table_name,is_use_db_url,data_category,urls_or_sql,task_describtion,task_create_date,task_update_time,download_thread_num,task_status from task order by id desc";
 
-	public int saveTaskToDb(String task_name, String template_id, String insert_db_table_name, String is_use_db_url, String data_category, String urls_or_sql, String task_describtion,String download_thread_num) {
-		List<String> dataList = Arrays.asList(task_name, template_id, insert_db_table_name, is_use_db_url, data_category, urls_or_sql, task_describtion,download_thread_num, getFormatCurrentDate(), getFormatCurrentDate());
+	public int saveTaskToDb(String task_name, String template_id, String insert_db_table_name, String is_use_db_url, String data_category, String urls_or_sql, String task_describtion, String download_thread_num) {
+		List<String> dataList = Arrays.asList(task_name, template_id, insert_db_table_name, is_use_db_url, data_category, urls_or_sql, task_describtion, download_thread_num, getFormatCurrentDate(), getFormatCurrentDate());
 		return dbUtils.executeInsert(SAVE_TASK_SQL, dataList);
 	}
 

@@ -4,8 +4,8 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
+import xu.main.java.distribute_crawler_common.vo.MyRulePattern;
 import xu.main.java.distribute_crawler_web.util.DbUtil;
-import xu.main.java.distribute_crawler_web.vo.MyRulePattern;
 
 
 public class RulePatternDao {

@@ -5,13 +5,11 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import xu.main.java.distribute_crawler_common.vo.TemplateContentVO;
 import xu.main.java.distribute_crawler_web.request_processor.AbstractRequestProcessor;
-import xu.main.java.distribute_crawler_web.vo.TemplateContentVO;
-import xu.main.java.extractor.CssExtractor;
 import xu.main.java.extractor.IExtractor;
 import xu.main.java.util.GsonUtil;
 import xu.main.java.util.HttpDownload;
-
 
 public class ExtractorTemplateTestProcessor extends AbstractRequestProcessor {
 
@@ -28,7 +26,10 @@ public class ExtractorTemplateTestProcessor extends AbstractRequestProcessor {
 
 		System.out.println("download: " + templateTestUrl);
 		String html = HttpDownload.download(templateTestUrl, "gb2312");
-		IExtractor extractor = new CssExtractor();
+		
+		// TODO:后期需要修改为数据库读取传入
+		IExtractor extractor = ExtractorFactory.getInstance().getExtractor("cssExtractor");
+		extractor.extractorColumns(html, templateVo.getHtmlPathList());
 		Map<String, String> resultMap = extractor.extractorColumns(html, templateVo.getHtmlPathList());
 
 		String result = GsonUtil.toJson(resultMap);

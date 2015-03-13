@@ -15,13 +15,21 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<!-- mail -->
 		<mail.version>1.4.7</mail.version>
+		<crawler-common.version>1.0-SNAPSHOT</crawler-common.version>
+		<crawler-client.version>1.0-SNAPSHOT</crawler-client.version>
 	</properties>
 
 	<dependencies>
+		<!-- distribute-crawler-common -->
+		<dependency>
+			<groupId>xu.main.java</groupId>
+			<artifactId>distribute-crawler-common</artifactId>
+			<version>${crawler-common.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>xu.main.java</groupId>
 			<artifactId>distribute-crawler-client</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${crawler-client.version}</version>
 		</dependency>
 		<!-- Google gson begin -->
 		<dependency>
@@ -56,7 +64,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.27</version>
 		</dependency>
-		
+
 		<!-- log4j -->
 		<dependency>
 			<groupId>log4j</groupId>

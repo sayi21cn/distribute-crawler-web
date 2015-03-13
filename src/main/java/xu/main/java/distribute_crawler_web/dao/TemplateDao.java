@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import xu.main.java.distribute_crawler_common.vo.TaskListVO;
+import xu.main.java.distribute_crawler_common.vo.TemplateVO;
 import xu.main.java.distribute_crawler_web.configure.TermPreprocessorWebConfigure;
 import xu.main.java.distribute_crawler_web.util.DbUtil;
-import xu.main.java.distribute_crawler_web.vo.TaskListVO;
-import xu.main.java.distribute_crawler_web.vo.TemplateVO;
 
 
 public class TemplateDao {

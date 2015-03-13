@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import xu.main.java.distribute_crawler_common.vo.TaskRecord;
 import xu.main.java.distribute_crawler_web.configure.TermPreprocessorWebConfigure;
 import xu.main.java.distribute_crawler_web.util.DbUtil;
-import xu.main.java.distribute_crawler_web.vo.TaskRecord;
 
 
 public class TaskDao {

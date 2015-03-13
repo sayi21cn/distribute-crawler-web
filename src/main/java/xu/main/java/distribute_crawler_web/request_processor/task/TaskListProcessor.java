@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import xu.main.java.distribute_crawler_web.dao.TaskDao;
 import xu.main.java.distribute_crawler_web.request_processor.AbstractRequestProcessor;
-import xu.main.java.util.GsonUtil;
+import xu.main.java.distribute_crawler_web.util.GsonUtil;
 
 
 public class TaskListProcessor extends AbstractRequestProcessor {

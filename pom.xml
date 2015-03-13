@@ -16,7 +16,6 @@
 		<!-- mail -->
 		<mail.version>1.4.7</mail.version>
 		<crawler-common.version>1.0-SNAPSHOT</crawler-common.version>
-		<crawler-client.version>1.0-SNAPSHOT</crawler-client.version>
 	</properties>
 
 	<dependencies>
@@ -25,11 +24,6 @@
 			<groupId>xu.main.java</groupId>
 			<artifactId>distribute-crawler-common</artifactId>
 			<version>${crawler-common.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>xu.main.java</groupId>
-			<artifactId>distribute-crawler-client</artifactId>
-			<version>${crawler-client.version}</version>
 		</dependency>
 		<!-- Google gson begin -->
 		<dependency>

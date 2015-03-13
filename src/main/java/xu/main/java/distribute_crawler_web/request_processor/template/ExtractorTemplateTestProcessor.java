@@ -5,11 +5,13 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import xu.main.java.distribute_crawler_common.extractor.ExtractorFactory;
+import xu.main.java.distribute_crawler_common.extractor.IExtractor;
+import xu.main.java.distribute_crawler_common.util.HttpDownload;
 import xu.main.java.distribute_crawler_common.vo.TemplateContentVO;
+import xu.main.java.distribute_crawler_web.configure.DbConfig;
 import xu.main.java.distribute_crawler_web.request_processor.AbstractRequestProcessor;
-import xu.main.java.extractor.IExtractor;
-import xu.main.java.util.GsonUtil;
-import xu.main.java.util.HttpDownload;
+import xu.main.java.distribute_crawler_web.util.GsonUtil;
 
 public class ExtractorTemplateTestProcessor extends AbstractRequestProcessor {
 
@@ -26,11 +28,10 @@ public class ExtractorTemplateTestProcessor extends AbstractRequestProcessor {
 
 		System.out.println("download: " + templateTestUrl);
 		String html = HttpDownload.download(templateTestUrl, "gb2312");
-		
+
 		// TODO:后期需要修改为数据库读取传入
 		IExtractor extractor = ExtractorFactory.getInstance().getExtractor("cssExtractor");
-		extractor.extractorColumns(html, templateVo.getHtmlPathList());
-		Map<String, String> resultMap = extractor.extractorColumns(html, templateVo.getHtmlPathList());
+		Map<String, String> resultMap = extractor.extractorColumns(html, templateVo.getHtmlPathList(), DbConfig.DB_SPLIT_STRING);
 
 		String result = GsonUtil.toJson(resultMap);
 		output(response, result);

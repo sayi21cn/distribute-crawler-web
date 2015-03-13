@@ -1,6 +1,6 @@
 package xu.main.java.distribute_crawler_web.vo;
 
-public class TaskVO {
+public class TaskRecord {
 	private int id;
 	private String task_name;
 	private String template_id;

@@ -72,7 +72,7 @@ $(function() {
 		data["download_thread_num"] = download_thread_num.val();
 		
 		$.ajax({
-			type : 'GET',
+			type : 'post',
 			url : "service?method=task_add",
 			data:data,
 			dataType: "json", 

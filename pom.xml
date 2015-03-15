@@ -4,10 +4,10 @@
 
 	<groupId>com.unisound.dcs</groupId>
 	<artifactId>distribute-crawler-web</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>term-preprocessor-web</name>
+	<name>distribute-crawler-web</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -15,7 +15,7 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<!-- mail -->
 		<mail.version>1.4.7</mail.version>
-		<crawler-common.version>1.0-SNAPSHOT</crawler-common.version>
+		<crawler-common.version>1.0</crawler-common.version>
 	</properties>
 
 	<dependencies>

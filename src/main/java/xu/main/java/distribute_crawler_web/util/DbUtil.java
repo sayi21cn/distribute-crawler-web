@@ -17,6 +17,8 @@ import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
 
+import xu.main.java.distribute_crawler_common.util.StringHandler;
+
 
 public class DbUtil {
 	private static Logger logger = Logger.getLogger(DbUtil.class);

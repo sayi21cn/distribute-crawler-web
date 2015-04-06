@@ -4,7 +4,7 @@
 
 	<groupId>com.unisound.dcs</groupId>
 	<artifactId>distribute-crawler-web</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>2.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>distribute-crawler-web</name>
@@ -15,7 +15,7 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<!-- mail -->
 		<mail.version>1.4.7</mail.version>
-		<crawler-common.version>1.1-SNAPSHOT</crawler-common.version>
+		<crawler-common.version>2.0-SNAPSHOT</crawler-common.version>
 	</properties>
 
 	<dependencies>

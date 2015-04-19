@@ -29,8 +29,9 @@
 		</tr>
 		<tr>
 			<td>网页抽取模板</td>
+			<!-- placeholder="CssPath实体类对应的json表示形式" -->
 			<td><textarea id="template_area" rows="10" cols="100"
-					placeholder="CssPath实体类对应的json表示形式">{"htmlPathList":[{"pathName":"dytt_movie_title","dirPathList":[".co_content8 > ul","table"],"dirIndexList":[0,0],"pathList":["tbody","tr","td","b","a"],"pathIndexList":[0,1,1,0,0]},{"pathName":"dytt_movie_detail_url","dirPathList":[".co_content8 > ul","table"],"dirIndexList":[0,0],"pathList":["tbody","tr","td","b","a"],"pathIndexList":[0,1,1,0,0],"attrName":"href"}]}</textarea>
+					placeholder='{"htmlPathList":[{"pathName":"dytt_movie_title","dirPathList":[".co_content8 > ul","table"],"dirIndexList":[0,0],"pathList":["tbody","tr","td","b","a"],"pathIndexList":[0,1,1,0,0]},{"pathName":"dytt_movie_detail_url","dirPathList":[".co_content8 > ul","table"],"dirIndexList":[0,0],"pathList":["tbody","tr","td","b","a"],"pathIndexList":[0,1,1,0,0],"attrName":"href"}]}'></textarea>
 			<td><input type="button" value="测试" onclick="template_test();" /></td>
 		</tr>
 		<tr>
@@ -43,7 +44,7 @@
 		<tr>
 			<td>描述</td>
 			<td><textarea rows="7" cols="100" id="template_describe"
-					placeholder="备注">抽取目录页的电影标题和详情页链接</textarea>
+					placeholder="备注"></textarea>
 			<td></td>
 		</tr>
 		<tr>
@@ -95,7 +96,7 @@
 	var template_test = function() {
 		var template_area = $("#template_area");
 		var templateTestUrl = $("#template_test_url");
-		var template_content = template_area.text();
+		var template_content = template_area.val();
 		var template_test_url = templateTestUrl.val()
 		if (template_content.length < 5) {
 			alert("模板不正确，请修改");

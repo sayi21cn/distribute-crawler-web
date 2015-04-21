@@ -15,7 +15,7 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<!-- mail -->
 		<mail.version>1.4.7</mail.version>
-		<crawler-common.version>2.0-SNAPSHOT</crawler-common.version>
+		<crawler-common.version>2.1-SNAPSHOT</crawler-common.version>
 	</properties>
 
 	<dependencies>

@@ -9,7 +9,6 @@ import xu.main.java.distribute_crawler_web.dao.DBTableInit;
 import xu.main.java.distribute_crawler_web.request_processor.AbstractRequestProcessor;
 import xu.main.java.distribute_crawler_web.request_processor.RequestProcessorFactory;
 
-
 /***
  * 
  */

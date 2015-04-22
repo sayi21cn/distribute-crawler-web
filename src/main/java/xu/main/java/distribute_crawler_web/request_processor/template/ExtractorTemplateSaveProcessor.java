@@ -5,9 +5,9 @@ import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import xu.main.java.distribute_crawler_web.configure.CrawlerWebConf;
 import xu.main.java.distribute_crawler_web.dao.TemplateDao;
 import xu.main.java.distribute_crawler_web.request_processor.AbstractRequestProcessor;
-
 
 public class ExtractorTemplateSaveProcessor extends AbstractRequestProcessor {
 
@@ -15,7 +15,13 @@ public class ExtractorTemplateSaveProcessor extends AbstractRequestProcessor {
 
 	@Override
 	public void process(HttpServletRequest request, HttpServletResponse response) {
-		
+
+		boolean isLogin = this.isLogin(request);
+		if (!isLogin) {
+			output(response, CrawlerWebConf.PERMISION_NOT_DEFINE_MESSAGE);
+			return;
+		}
+
 		try {
 			String templateName = new String(request.getParameter("template_name").getBytes("iso8859-1"), "utf-8");
 			String templateArea = new String(request.getParameter("template_area").getBytes("iso8859-1"), "utf-8");

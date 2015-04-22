@@ -9,6 +9,7 @@ import xu.main.java.distribute_crawler_common.extractor.ExtractorFactory;
 import xu.main.java.distribute_crawler_common.extractor.IExtractor;
 import xu.main.java.distribute_crawler_common.util.HttpDownload;
 import xu.main.java.distribute_crawler_common.vo.TemplateContentVO;
+import xu.main.java.distribute_crawler_web.configure.CrawlerWebConf;
 import xu.main.java.distribute_crawler_web.configure.DbConfig;
 import xu.main.java.distribute_crawler_web.request_processor.AbstractRequestProcessor;
 import xu.main.java.distribute_crawler_web.util.GsonUtil;
@@ -17,6 +18,12 @@ public class ExtractorTemplateTestProcessor extends AbstractRequestProcessor {
 
 	@Override
 	public void process(HttpServletRequest request, HttpServletResponse response) {
+
+		boolean isLogin = this.isLogin(request);
+		if (!isLogin) {
+			output(response, CrawlerWebConf.PERMISION_NOT_DEFINE_MESSAGE);
+			return;
+		}
 
 		String templateContent = request.getParameter("template_content");
 		String templateTestUrl = request.getParameter("template_test_url");

@@ -75,7 +75,7 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td><input id="task_add_button" type="button" value="提交" /></td>
+			<td><input id="task_add_button" type="button" value="提交" onclick="task_add_button_click();" /></td>
 		</tr>
 	</table>
 </body>

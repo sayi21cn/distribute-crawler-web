@@ -35,12 +35,11 @@ $(function() {
 		$.ajax({
 			type : 'post',
 			url : "service?method=task_add",
-			data:data,
-			dataType: "json", 
+			data:data, 
 			error : function() {
 			},        	
         	success: function (data){
-        		$.alert(data);
+        		alert(data);
         	}
        });
 	});

@@ -3,7 +3,6 @@ $(function() {
 	$.ajax({
 		type : 'GET',
 		url : "service?method=task_list",
-		dataType: "json", 
 		error : function() {
 		},
 		success : function(data) {

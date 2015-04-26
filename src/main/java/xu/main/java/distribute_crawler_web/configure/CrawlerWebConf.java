@@ -14,7 +14,7 @@ public class CrawlerWebConf {
 
 	public static final String LOCAL_CODE_CATEGORY = "UTF-8";
 	
-	public static final String PERMISION_NOT_DEFINE_MESSAGE = "您无权进行此操作，请联系管理员获取权限!";
+	public static final String PERMISION_NOT_DEFINE_MESSAGE = "您无权进行此操作，请联系管理员获取权限";
 	
 	public static final String LOGIN_SESSION_KEY = "username";
 	
